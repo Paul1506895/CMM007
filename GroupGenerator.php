@@ -1,17 +1,17 @@
 <?php
 
-$hostname = 'localhost';
+$hostname = "localhost";
 $dbname = 'test';
-$dbuser = 'root';
-$dbpass = 'root';
+$dbuser = "root";
+$dbpass = "";
 
 
 // STEP TWO : connecting to the database
-$link = new mysqli($hostname, $dbuser, $dbpass, $dbname);
+$db = new mysqli($hostname, $dbuser, $dbpass, $dbname);
 
 // Check connection
-if ($link->connect_error) {
-    die("Connection failed: " . $link->connect_error);
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
   }
 
 if(isset($_POST["submit"]))
@@ -20,8 +20,8 @@ if(isset($_POST["submit"]))
     $class =$_POST["class"];
 
     $sql = "INSERT INTO class (class) VALUES ('$class')";
-    mysqli_query($link, $sql);
-    $class = mysqli_insert_id($link);
+    mysqli_query($db, $sql);
+    $class = mysqli_insert_id($db);
 
     for ($a = 0; $a < count($_POST["studentName"]); $a++)
     {
@@ -30,7 +30,7 @@ if(isset($_POST["submit"]))
         '" .$_POST["studentEmail"][$a] ."',
             '$class',
         '" .$_POST["studentCohort"][$a] ."',)";
-        mysqli_query($link, $sql);
+        mysqli_query($db, $sql);
     }
 
     echo "<p>Class has been added</p>";
