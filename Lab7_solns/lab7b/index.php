@@ -1,8 +1,8 @@
 <!DOCTYPE html>
- <html>
- <head> 
+<html>
+<head>
     <title>selfreference</title>
- </head> 
+</head>
 <body>
 
 <?php
@@ -26,4 +26,4 @@ else {echo "how did we get here";}
 
 ?>
 </body>
- </html>
+</html>
