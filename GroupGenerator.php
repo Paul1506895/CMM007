@@ -44,13 +44,13 @@ if(isset($_POST["submit"]))
     <input name="class" placeholder="Add a class" required>
     <br></br>
 
-        <table style=centre>
-            <tr>
+        <table align="center">
+            <thread>
                 <th>Student name</th>
                 <th>Student email</th>
                 <th>cohort</th>
                 <th></th>
-            </tr>
+            </thread>
 
         <tbody id="tbody"></tbody>
         </table>

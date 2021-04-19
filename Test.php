@@ -1,13 +1,15 @@
-
-
-
+<p>Number of teams</p> <input name= "noTeams">
+<input type="submit" name="submit">
+<br></br>
 
 <?php
+
 
 // define our people and teams as simple arrays
 for($i=1;$i<71;$i++){
     $people[]="person".$i;
 }
+
 
 for($i=1;$i<18;$i++){
     $teams[]="team".$i;
